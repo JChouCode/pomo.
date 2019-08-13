@@ -1,0 +1,33 @@
+.pomo {
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+.time {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  text-align: left;
+  width: 100%;
+  font-size: 9em;
+  color: white;
+  font-weight: bold;
+}
+
+.buttons {
+  position: absolute;
+}
+
+button {
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
