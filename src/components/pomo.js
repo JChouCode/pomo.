@@ -1,36 +1,46 @@
 import React from 'react';
+import "./css/pomo.css"
 
-class pomo extends React.Component {
+export class Pomo extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      time: "",
+      time: "25:00",
       timeMs: 0,
       start: 0,
-      tick: false
+      tick: false,
+      intervalId: 0
     }
+    this.start = this.start.bind(this);
+    this.stop = this.stop.bind(this);
   }
 
   msToString(ms) {
-    let time = 1.5 * 10 ** 6 - this.state.time;
+    let time = 1.5 * 10 ** 6 - this.state.timeMs;
     let totalSeconds = Math.floor(time / 1000);
     let minutes = Math.floor(totalSeconds / 60);
     let seconds = totalSeconds % 60;
-    console.log("${minutes}:${seconds}");
-    return "${minutes}:${seconds}";
+    if (seconds < 10) {
+      console.log(`${minutes}:0${seconds}`);
+      return `${minutes}:0${seconds}`
+    }
+    console.log(`${minutes}:${seconds}`);
+    return `${minutes}:${seconds}`;
 
   }
 
   start() {
-    this.setState({ time: "25:00", start: Date.now(), tick: true });
-    setInterval(() => {
+    this.setState({ time: "25:00", timeMs: 0, start: Date.now(), tick: true });
+    let intervalId = setInterval(() => {
       this.setState({ time: this.msToString(this.state.timeMs), timeMs: Date.now() - this.state.start })
     }, 1000);
+    this.setState({ intervalId: intervalId });
   }
 
   stop() {
-    this.setState({ time: "25:00", start: 0, tick: false });
+    clearInterval(this.state.intervalId);
+    this.setState({ time: "25:00", timeMs: 0, start: 0, tick: false });
   }
 
   render() {
