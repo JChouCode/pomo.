@@ -2,6 +2,7 @@
   "name": "pomo.",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jchoucode.github.io/pomo./",
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^7.12.0",

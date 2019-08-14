@@ -21,6 +21,8 @@
 
 .buttons {
   position: absolute;
+  border: 2px solid white;
+  border-radius: 2px;
 }
 
 button {
@@ -30,4 +32,9 @@ button {
   outline: none;
   font-weight: bold;
   font-size: 1.2em;
+  transition: 1.5s all cubic-bezier(0.23, 1, 0.320, 1)
+}
+
+button:hover {
+  background: darkgray;
 }

@@ -22,19 +22,20 @@ export class Pomo extends React.Component {
     let minutes = Math.floor(totalSeconds / 60);
     let seconds = totalSeconds % 60;
     if (seconds < 10) {
-      console.log(`${minutes}:0${seconds}`);
+      console.log(time + " : " + `${minutes}:0${seconds}`);
       return `${minutes}:0${seconds}`
     }
-    console.log(`${minutes}:${seconds}`);
+    console.log(time + " : " + `${minutes}:${seconds}`);
     return `${minutes}:${seconds}`;
 
   }
 
   start() {
     this.setState({ time: "25:00", timeMs: 0, start: Date.now(), tick: true });
+    clearInterval(this.state.intervalId);
     let intervalId = setInterval(() => {
       this.setState({ time: this.msToString(this.state.timeMs), timeMs: Date.now() - this.state.start })
-    }, 1000);
+    }, 100);
     this.setState({ intervalId: intervalId });
   }
 
