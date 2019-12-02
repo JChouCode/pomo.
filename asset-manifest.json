@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pomo./static/css/main.d778eb4e.chunk.css",
+    "main.js": "/pomo./static/js/main.7c02a14e.chunk.js",
+    "main.js.map": "/pomo./static/js/main.7c02a14e.chunk.js.map",
+    "runtime~main.js": "/pomo./static/js/runtime~main.ed33c73a.js",
+    "runtime~main.js.map": "/pomo./static/js/runtime~main.ed33c73a.js.map",
+    "static/js/2.4e81ba5b.chunk.js": "/pomo./static/js/2.4e81ba5b.chunk.js",
+    "static/js/2.4e81ba5b.chunk.js.map": "/pomo./static/js/2.4e81ba5b.chunk.js.map",
+    "index.html": "/pomo./index.html",
+    "precache-manifest.e827b677acd1d95fca88ad199e33c491.js": "/pomo./precache-manifest.e827b677acd1d95fca88ad199e33c491.js",
+    "service-worker.js": "/pomo./service-worker.js",
+    "static/css/main.d778eb4e.chunk.css.map": "/pomo./static/css/main.d778eb4e.chunk.css.map"
+  }
+}
